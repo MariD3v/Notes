@@ -1,0 +1,42 @@
+Virtual ENV (venv) es una herramienta que viene instalada con python para crear entornos virtuales de python.
+Un entorno virtual es una carpeta aislada de la que podemos intalar librerias con distintas versiones de python para evitar errores de compatibilidad.
+
+En VSCode:
+1º Crea una carpeta para nuestro entorno virtual
+2º Abre la carpeta en VSCode
+3º cntrl+shift+p , para abrir la paleta de comandos y seleccionamos Python:Crear ambiente...
+4º Seleccionamos env y el interprete de python que queremos usar.
+5º Si nuestra terminal predeterminada es PowerShell debemos cambiarla porque nos arroja un error. 
+Para ello debemos buscar en la paleta de comandos Terminal: seleccione Perfil predeterminado. Y seleccionamos cmd por ejemplo
+6º Ahora debemos crear una nueva terminal para el entorno, buscamos en la paleta de comandos Terminal: Crear nueva terminal.
+7º Cuando se nos abra la terminal, escribimos en ella (python -m pip install flask) para instalar flask en el entorno o cualquier otro modulo
+8º Creamos nuestro archivo que se llamara app.py
+9º Comenzamos a escribir nuestro codigo: 
+(Ejemplo):
+  - Importamos Flask
+
+    from flask import Flask
+    app = Flask(__name__)
+
+  - Agregue una función que devuelva contenido, en este caso una cadena simple, y use app.routeel decorador de Flask para asignar la ruta URL /a esa función:
+
+   @app.route("/")
+   def home():
+       return "Hello, Flask!"
+
+En Flask:
+10º En la Terminal integrada, ejecute la aplicación ingresando (python -m flask run), que ejecuta el servidor de desarrollo Flask. 
+El servidor de desarrollo busca app.pyde forma predeterminada. Pinchamos en la ip que nos da y ya tendriamos nuestro servidor creado.
+11º Detenga la aplicacion usando cntrl+c
+
+-------------------------------------------------------------------------------------------------------
+Otra forma de crear un venv:
+1º Desde la  terminal, vamos a la carpeta donde crearemos nuestro entorno
+2º python3 -m venv (nombre que le daremos al entorno)
+3º una vez creado entraremos en el entorno ejecutando el Script de activate
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Al iniciar:
+1º Abrimos con VSCode solamente la carpeta del entorno
+2º Creamos una nueva terminal que activará automáticamente el entorno, si no, podemos ir a la carpeta de Scripts en .venv y ejecutar en consola .\activate.bat
+3º De la misma forma, para cerrar el venv, vamos a la carpeta de scrips y ejecutamos en consola .\deactivate.bat
