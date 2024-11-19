@@ -1,0 +1,11 @@
+Instalar un servidor LAMP (Linux, APACHE, MySQl Y PHP):
+
+1 Actualizar apt:
+	- sudo apt update (actualizar)
+	- sudo apt upgrade (implementar)
+2 Instala LAMP
+  - sudo apt install lamp-server -y
+3 Asígnale un shell válido:
+  - sudo usermod -s /bin/bash www-data
+4 Asígnale una contraseña:
+  - sudo passwd www-data
